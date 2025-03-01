@@ -1,3 +1,4 @@
+local executing = false
 local colors = {
     ['red'] = 16720402,
     ['green'] = 515594,
@@ -32,6 +33,11 @@ exports('Log', function(webhook, title, fields, text, color, name)
         return 
     end
 
+    while executing do
+        Wait(100)
+    end
+    executing = true
+
     if type(fields) == 'string' then
         fields = {
             {
@@ -45,6 +51,7 @@ exports('Log', function(webhook, title, fields, text, color, name)
     PerformHttpRequest(
         webhook,
         function(err, text, headers)
+                executing = false
              if err == 400 then
                  error('Caught an error while sending the log to discord')
                  return
