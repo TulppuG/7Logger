@@ -15,7 +15,7 @@ exports.7Logger:Log(webhook, title, fields, text, color, username)
 Color options: 'red', 'green', 'yellow', 'white', 'black', 'blue', 'grey', 'orange', 'aqua', 'darkAqua', 'darkGreen', 'darkBlue', 'purple', 'darkPurple', 'luminousVividPink', 'darkVividPink', 'gold', 'darkGold', 'darkOrange', 'darkRed', 'darkGrey', 'darkerGrey', 'lightGrey', 'navy', 'darkNavy'
 
 Example: 
-exports.7Logger:Log(
+exports['7Logger']:Log(
     "https://discord.com/api/webhooks/1326621382909493350/a0Sd5pe0dJYHKdni5mUycUEQTJXPxBVxfLzwic-sxMhIbKwx9Wu4_IckJrbwf48qY1B0",
     "New robbery",
     {
@@ -37,7 +37,7 @@ exports.7Logger:Log(
 
 Example 2 (fields data type string)
 
-Example: exports.7Logger:Log(
+Example: exports['7Logger']:Log(
     "https://discord.com/api/webhooks/1326621382909493350/a0Sd5pe0dJYHKdni5mUycUEQTJXPxBVxfLzwic-sxMhIbKwx9Wu4_IckJrbwf48qY1B0",
     "New robbery",
     "New robbery alert from Legion Square"
